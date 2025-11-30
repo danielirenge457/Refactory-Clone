@@ -39,7 +39,6 @@ header nav {
 .nav-links {
     list-style: none;
 }
-
 /* Navbar container */
 .nav-container {
     display: flex;             /* Flex layout */
@@ -128,10 +127,11 @@ header nav {
     gap: 40px;
     flex-wrap: wrap;
     padding: 30px;
+    background-color: #f7f4f9;
 }
 
 .refactory-academy .text {
-    flex: 1 1 500px;
+    flex: 1 1 520px;
 }
 
 .refactory-academy .image {
@@ -342,23 +342,82 @@ header nav {
     margin-bottom: 20px;
 }
 
-/* Success Section */
 .success {
     padding: 60px 0;
-    text-align: center;
-    background-color: #e6f2ff;
+    background-color: #333e48;
+}
+/* Flex container */
+.success-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
+/* Free-style images container */
+.success-images {
+    position: relative;
+    flex: 1 1 400px;
+    height: 500px; /* Adjust height as needed */
+}
+
+.success-images img {
+    position: absolute;
+    width: 60%; /* Adjust width */
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Individual image positioning */
+.success-images .img1 {
+    top: 0;
+    left: 0;
+    transform: rotate(-5deg);
+}
+
+.success-images .img2 {
+    bottom: 0;
+    right: 0;
+    transform: rotate(5deg);
+}
+
+/* Stats grid */
 .success-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    flex: 1 1 400px;
+    text-align: center;
 }
 
 .success-item h3 {
     font-size: 2rem;
     color: #00bfff;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.success-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .success-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .success-images {
+        height: 400px;
+        margin-bottom: 20px;
+    }
+
+    .success-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Programs Section */
